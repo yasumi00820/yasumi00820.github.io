@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "stress";
+  src: url(fonts/stressglider-Regular.otf);
+}
+
+html {
+  font-size: 1vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(24, 27, 131);
+  font-weight: bold;
+
+  background-size: 3rem 3rem;
+  background-image:
+    linear-gradient(to right, rgba(128, 128, 128, 0.459) .05rem, transparent .05rem),
+    linear-gradient(to bottom,rgba(128, 128, 128, 0.459) .05rem, transparent .05rem);
+}
+
+#text_container {
+  font-family: "stress";
+  font-size: 2.5rem;
+  width: 35vw;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+a {
+  color: rgb(24, 27, 131);
+  text-decoration: none;
+  cursor: pointer;
+
+  border-bottom: .3rem rgb(24, 27, 131) solid;
+  filter: url(#squiggly-filter);
+}
+
+a:hover {
+  filter: url(#squiggly-filter2);
+}
+
+#toggle_container {
+  font-family: "stress";
+  font-size: 2.5rem;
+  width: 30vw;  
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+}
+
+#toggle {
+  width: 10rem;
+  height: 4rem;
+  filter: url(#squiggly-filter);
+
+  border: 0.12rem solid rgb(24, 27, 131) ;
+  border-radius: 12rem;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 10rem;
+  height: 4rem;
+
+  filter: url(#squiggly-filter);
+
+  border: 0.3rem solid rgb(24, 27, 131) ;
+  border-radius: 12rem;
+
+  -webkit-transition: ease-in-out transform .4s;
+  transition: ease-in-out transform .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  
+  width: 3.7rem;
+  height: 3.7rem;
+
+  left: 0.2rem;
+  bottom: 0.15rem;
+  background-color: rgb(24, 27, 131) ;
+  -webkit-transition: ease-in-out transform .4s;
+  transition: ease-in-out transform .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(5.9rem);
+  -ms-transform: translateX(5.9rem);
+  transform: translateX(5.9rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 12rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+
+  body {
+    background-size: 10rem 10rem;
+  }
+  
+  #text_container {
+    font-family: "stress";
+    font-size: 8rem;
+    width: 90vw;
+    position: absolute;
+    top: 3vh;
+    left: 5rem;
+    height: 95vh;
+  }
+
+  #toggle_container {
+    font-family: "stress";
+    font-size: 2.5rem;
+    width: 30vw;
+    position: fixed;
+    top: 5.5rem;
+    right: 0;
+  }
+
+  a {
+    border-bottom: .8rem rgb(24, 27, 131) solid;
+  }
+
+  #toggle {
+    width: 10rem;
+    height: 4rem;
+    filter: url(#squiggly-filter);
+  
+    border: 0.5rem solid rgb(24, 27, 131) ;
+    border-radius: 12rem;
+  
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 20rem;
+  height: 9.5rem;
+
+  filter: url(#squiggly-filter);
+
+  border: .8rem rgb(24, 27, 131) solid;
+  border-radius: 12rem;
+
+  -webkit-transition: ease-in-out transform .4s;
+  transition: ease-in-out transform .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  
+  width: 9rem;
+  height: 9rem;
+
+  left: 0.5rem;
+  bottom: 0.2rem;
+  background-color: rgb(24, 27, 131) ;
+  -webkit-transition: ease-in-out transform .4s;
+  transition: ease-in-out transform .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10rem);
+  -ms-transform: translateX(10rem);
+  transform: translateX(10rem);
+}
+
+
+}
+
+
+

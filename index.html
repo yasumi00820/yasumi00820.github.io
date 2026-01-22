@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Akseli Manner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="text_container">
+        aKSELI MANNER<br><br>
+GRaPHIC DESIgN aNd<br>
+WEB DEVELOPMENT<br><br>
+
+<!--<a href="manner_portfolio2025.pdf" download>DOWNLOAD PDF PORTFOLIO</a><br>[IN FINNISH]<br><br>-->
+
+MY PROJECTS<br><br>
+
+<a href="https://multispecies-childhoods.fi/">MULTISPECIES CHILDHOODS</a><br>a COLLECTION SITE FOR a RESEARCH PROJECT IN THE UNIVESITY OF HELSINKI, 2025<br><br>
+<a href="https://sieka-eklig.com/">SIEKA[ET]EKLIG</a><br>[DEVELOPMENT ONLY] a PORTFOLIO SITE FOR A NEW DESIGN STUDIO BASED IN HELSINKI, 2025<br><br>
+<a href="https://fairenough.ee/">FAIR ENOUGH</a><br>WEBSITE FOR A BOOKFAIR, 2025<br><br>
+<a href="https://swiping-dichotomies.digitale-grafik.com/">SWIPING DICHOTOMIES</a>,<br>MFA THESIS, 2024<br><br>
+SONNESTUDIO ESKOFIER<br>[CURRENTLY UNDER RENOVATION]<br>PORTFOLIO FOR JAKOB aND ESBEN, 2024<br><br>
+<a href="https://haunting-futures.net/">THE FUTURES THAT HaUNT US</a><br> DIGITAL THEATRE EXPERIENCE<br>WITH MATHIS DIECKMANN, 2023<br><br>
+
+<a href="https://vcd.aalto.fi/">BA aALTO UNIVERSITY</a><br>
+<a href="http://www.digitale-grafik.com/">MFa KLaSSEDIgITALEGRAFIK</a><br><br>
+
+<a href="mailto:akseli.manner@gmail.com">aKSELI.MANNER[aT]gMAIL.COM</a><br>
+<a href="https://www.instagram.com/manner________laatta/">Ig</a><br><br>
+
+THEY SaY BIG THINKERS HAVE<br>
+a BAD HANDWRITINg!<br><br><br>
+    </div>
+
+    <div id="toggle_container">
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+    </div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+    $('#toggle_container input[type="checkbox"]').click(function() {
+        if ($(this).is(':checked')) {
+            $('#circle').addClass('moveRight');
+            $('#text_container').css('font-family', 'Times');
+            $('#text_container').css('font-weight', 'bold');
+            $('#text_container').css('text-transform', 'lowercase');
+            $('a').css('text-transform', 'lowercase');
+            $('a').css('filter', 'none');
+            $('.slider').css('filter', 'none');
+        } else {
+            $('#circle').removeClass('moveRight');
+            $('#text_container').css('font-family', '"stress"');    
+            $('#text_container').css('text-transform', 'none');
+            $('a').css('text-transform', 'none');
+            $('a').css('filter', 'url(#squiggly-filter)');
+            $('.slider').css('filter', 'url(#squiggly-filter)');
+        }
+    });
+});
+
+</script>
+
+
+    <svg style="display: none;">
+        <filter id="squiggly-filter" x="0" y="0" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.02"
+            numOctaves="7"
+            result="noise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="8"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
+
+      <svg style="display: none;">
+        <filter id="squiggly-filter2" x="0" y="0" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.02"
+            numOctaves="15"
+            result="noise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="16"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
+
+
+
+</body>
+</html>
