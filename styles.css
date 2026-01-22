@@ -63,6 +63,15 @@ a:hover {
   align-items: center;
 }
 
+.pdf_download {
+  border: 0.25rem solid rgb(24, 27, 131);
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: .2rem;
+  padding-top: .2rem;
+}
+
 
 .switch {
   position: relative;
@@ -221,6 +230,15 @@ input:checked + .slider:before {
   -webkit-transform: translateX(10rem);
   -ms-transform: translateX(10rem);
   transform: translateX(10rem);
+}
+
+.pdf_download {
+  border: 0.2rem solid rgb(24, 27, 131);
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: .2rem;
+  padding-top: .2rem;
 }
 
 
